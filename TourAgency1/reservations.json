@@ -1,0 +1,140 @@
+{
+    "Kabachek": [
+        {
+            "city": "Andorra La Vella",
+            "country": {
+                "capital": "Andorra la Vella",
+                "cost_of_coffee": "$1.1 per cup",
+                "cost_of_food": "$12 for lunch",
+                "currency": "Euro",
+                "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_Andorra.svg.png",
+                "language": "Catalan",
+                "name": "Andora"
+            },
+            "date": "from 07.12 to 14.12",
+            "guide": {
+                "age": 30,
+                "firstName": "Alexander",
+                "languages": "French",
+                "lastName": "Miller",
+                "photo": "C:\\Users\\User\\Desktop\\TourAgency\\waist-up-portrait-of-handsome-serious-unshaven-male-keeps-hands-together-dressed-in-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer.jpg"
+            },
+            "mainPhoto": "C:\\Users\\User\\Desktop\\TourAgency\\AndorraPhoto.jpeg",
+            "meals": "breakfast",
+            "name": "Ski vacation in Andorra",
+            "photos": [
+                "C:\\Users\\User\\Desktop\\TourAgency\\president-8740-153112.jpg",
+                "C:\\Users\\User\\Desktop\\TourAgency\\president-8740-153113.jpg",
+                "C:\\Users\\User\\Desktop\\TourAgency\\president-8740-153114.jpg"
+            ],
+            "placeFrom": "December 7, Thu from Chisinau",
+            "placeTo": "December 14, Thu from Andorra la Vella",
+            "price": 25662,
+            "time": "7 nights in TWIN STANDARD",
+            "touristNumber": 1
+        }
+    ],
+    "Krevetka": [
+        {
+            "city": "Siena",
+            "country": {
+                "capital": "Rome",
+                "cost_of_coffee": "1.5$ per cup",
+                "cost_of_food": "16$ for lunch",
+                "currency": "Euro",
+                "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_Italy.svg.png",
+                "language": "Italian",
+                "name": "Italy"
+            },
+            "date": "from 20.11 to 29.11",
+            "guide": {
+                "age": 24,
+                "firstName": "Emily",
+                "languages": "Italian",
+                "lastName": "Johnson",
+                "photo": "C:\\Users\\User\\Desktop\\TourAgency\\people-and-emotions-close-up-of-confident-smiling-young-woman-looking-at-camera-standing-in-casual-r.jpg"
+            },
+            "mainPhoto": "C:\\Users\\User\\Desktop\\TourAgency\\229241_24805280.jpg",
+            "meals": "BB (breakfast)",
+            "name": "Truffle autumn in Tuscany (Italy)",
+            "photos": [
+                "C:\\Users\\User\\Desktop\\TourAgency\\229241_310628069.jpg",
+                "C:\\Users\\User\\Desktop\\TourAgency\\229241_511913576.jpg",
+                "C:\\Users\\User\\Desktop\\TourAgency\\229241_1230906155.jpg"
+            ],
+            "placeFrom": "November 20, Mon from Mukachevo",
+            "placeTo": "November 29, Wed",
+            "price": 24712,
+            "time": "9 nights",
+            "touristNumber": 1
+        },
+        {
+            "city": "Andorra La Vella",
+            "country": {
+                "capital": "Andorra la Vella",
+                "cost_of_coffee": "$1.1 per cup",
+                "cost_of_food": "$12 for lunch",
+                "currency": "Euro",
+                "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_Andorra.svg.png",
+                "language": "Catalan",
+                "name": "Andora"
+            },
+            "date": "from 07.12 to 14.12",
+            "guide": {
+                "age": 30,
+                "firstName": "Alexander",
+                "languages": "French",
+                "lastName": "Miller",
+                "photo": "C:\\Users\\User\\Desktop\\TourAgency\\waist-up-portrait-of-handsome-serious-unshaven-male-keeps-hands-together-dressed-in-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer.jpg"
+            },
+            "mainPhoto": "C:\\Users\\User\\Desktop\\TourAgency\\AndorraPhoto.jpeg",
+            "meals": "breakfast",
+            "name": "Ski vacation in Andorra",
+            "photos": [
+                "C:\\Users\\User\\Desktop\\TourAgency\\president-8740-153112.jpg",
+                "C:\\Users\\User\\Desktop\\TourAgency\\president-8740-153113.jpg",
+                "C:\\Users\\User\\Desktop\\TourAgency\\president-8740-153114.jpg"
+            ],
+            "placeFrom": "December 7, Thu from Chisinau",
+            "placeTo": "December 14, Thu from Andorra la Vella",
+            "price": 25662,
+            "time": "7 nights in TWIN STANDARD",
+            "touristNumber": 1
+        }
+    ],
+    "Shrimp": [
+        {
+            "city": "Rome",
+            "country": {
+                "capital": "Rome",
+                "cost_of_coffee": "1.5$ per cup",
+                "cost_of_food": "16$ for lunch",
+                "currency": "Euro",
+                "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_Italy.svg.png",
+                "language": "Italian",
+                "name": "Italy"
+            },
+            "date": "from 18.12 to 25.12",
+            "guide": {
+                "age": 30,
+                "firstName": "Alexander",
+                "languages": "French",
+                "lastName": "Miller",
+                "photo": "C:\\Users\\User\\Desktop\\TourAgency\\waist-up-portrait-of-handsome-serious-unshaven-male-keeps-hands-together-dressed-in-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer.jpg"
+            },
+            "mainPhoto": "C:\\Users\\User\\Desktop\\TourAgency\\TreviMain.jpg",
+            "meals": "BB breakfast",
+            "name": "Trevi",
+            "photos": [
+                "C:\\Users\\User\\Desktop\\TourAgency\\Trevi1.jpg",
+                "C:\\Users\\User\\Desktop\\TourAgency\\Trevi2.jpg",
+                "C:\\Users\\User\\Desktop\\TourAgency\\Trevi3.jpg"
+            ],
+            "placeFrom": "December 18, Mon 06:05 from Warsaw",
+            "placeTo": "December 25, Monday from Rome",
+            "price": 33287,
+            "time": "7 nights in Standard",
+            "touristNumber": 2
+        }
+    ]
+}

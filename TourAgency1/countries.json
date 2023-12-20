@@ -1,0 +1,47 @@
+[
+    {
+        "capital": "Cairo",
+        "cost_of_coffee": "$1.1 per cup",
+        "cost_of_food": "$3.9 for lunch",
+        "currency": "Egyptian pound",
+        "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_Egypt.svg.png",
+        "language": "Arabic",
+        "name": "Egypt"
+    },
+    {
+        "capital": "Rome",
+        "cost_of_coffee": "1.5$ per cup",
+        "cost_of_food": "16$ for lunch",
+        "currency": "Euro",
+        "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_Italy.svg.png",
+        "language": "Italian",
+        "name": "Italy"
+    },
+    {
+        "capital": "Paris",
+        "cost_of_coffee": "$2.2 per cup",
+        "cost_of_food": "$14.5 for lunch",
+        "currency": "Euro",
+        "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_France.svg.png",
+        "language": "French",
+        "name": "France"
+    },
+    {
+        "capital": "Abu Dhabi",
+        "cost_of_coffee": "$3.3 per cup",
+        "cost_of_food": "$9.50 for lunch",
+        "currency": "UAE dirham",
+        "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_the_United_Arab_Emirates.svg.png",
+        "language": "Arabic",
+        "name": "UAE"
+    },
+    {
+        "capital": "Andorra la Vella",
+        "cost_of_coffee": "$1.1 per cup",
+        "cost_of_food": "$12 for lunch",
+        "currency": "Euro",
+        "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_Andorra.svg.png",
+        "language": "Catalan",
+        "name": "Andora"
+    }
+]

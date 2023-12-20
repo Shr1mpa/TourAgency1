@@ -1,0 +1,193 @@
+[
+    {
+        "city": " Sharm el-Sheikh",
+        "country": {
+            "capital": "Cairo",
+            "cost_of_coffee": "$1.1 per cup",
+            "cost_of_food": "$3.9 for lunch",
+            "currency": "Egyptian pound",
+            "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_Egypt.svg.png",
+            "language": "Arabic",
+            "name": "Egypt"
+        },
+        "date": "from 30.11 to 07.12",
+        "mainPhoto": "C:\\Users\\User\\Desktop\\TourAgency\\booking802_3.jpg",
+        "meals": "AI all inclusive",
+        "name": "Sharm Holiday Resort, 4",
+        "photos": [
+            "C:\\Users\\User\\Desktop\\TourAgency\\booking802_1.jpg",
+            "C:\\Users\\User\\Desktop\\TourAgency\\booking802_10.jpg",
+            "C:\\Users\\User\\Desktop\\TourAgency\\booking802_11.jpg"
+        ],
+        "placeFrom": "November 30, Thursday 14:35 from Warsaw",
+        "placeTo": "December 7, Thursday from Sharm el-Sheikh",
+        "price": 25332,
+        "time": " 7 nights in Standard Garden View",
+        "touristNumber": 2
+    },
+    {
+        "city": "Siena",
+        "country": {
+            "capital": "Rome",
+            "cost_of_coffee": "1.5$ per cup",
+            "cost_of_food": "16$ for lunch",
+            "currency": "Euro",
+            "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_Italy.svg.png",
+            "language": "Italian",
+            "name": "Italy"
+        },
+        "date": "from 20.11 to 29.11",
+        "guide": {
+            "age": 24,
+            "firstName": "Emily",
+            "languages": "Italian",
+            "lastName": "Johnson",
+            "photo": "C:\\Users\\User\\Desktop\\TourAgency\\people-and-emotions-close-up-of-confident-smiling-young-woman-looking-at-camera-standing-in-casual-r.jpg"
+        },
+        "mainPhoto": "C:\\Users\\User\\Desktop\\TourAgency\\229241_24805280.jpg",
+        "meals": "BB (breakfast)",
+        "name": "Truffle autumn in Tuscany (Italy)",
+        "photos": [
+            "C:\\Users\\User\\Desktop\\TourAgency\\229241_310628069.jpg",
+            "C:\\Users\\User\\Desktop\\TourAgency\\229241_511913576.jpg",
+            "C:\\Users\\User\\Desktop\\TourAgency\\229241_1230906155.jpg"
+        ],
+        "placeFrom": "November 20, Mon from Mukachevo",
+        "placeTo": "November 29, Wed",
+        "price": 32950,
+        "time": "9 nights",
+        "touristNumber": 1
+    },
+    {
+        "city": "Paris",
+        "country": {
+            "capital": "Paris",
+            "cost_of_coffee": "$2.2 per cup",
+            "cost_of_food": "$14.5 for lunch",
+            "currency": "Euro",
+            "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_France.svg.png",
+            "language": "French",
+            "name": "France"
+        },
+        "date": "from 30.12 to 05.01",
+        "guide": {
+            "age": 25,
+            "firstName": "Sofia",
+            "languages": "Spenish",
+            "lastName": "Rodriguez",
+            "photo": "C:\\Users\\User\\Desktop\\TourAgency\\pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
+        },
+        "mainPhoto": "C:\\Users\\User\\Desktop\\TourAgency\\228526_22388888.jpg",
+        "meals": "BB (breakfast)",
+        "name": "Paris - the city of love",
+        "photos": [
+            "C:\\Users\\User\\Desktop\\TourAgency\\228526_591463196.jpg",
+            "C:\\Users\\User\\Desktop\\TourAgency\\228526_748472400.jpg",
+            "C:\\Users\\User\\Desktop\\TourAgency\\228526_1556353811.jpg"
+        ],
+        "placeFrom": "December 30, Sat from Lviv",
+        "placeTo": "January 5, Fri",
+        "price": 10712,
+        "time": "6 nights",
+        "touristNumber": 1
+    },
+    {
+        "city": "Andorra La Vella",
+        "country": {
+            "capital": "Andorra la Vella",
+            "cost_of_coffee": "$1.1 per cup",
+            "cost_of_food": "$12 for lunch",
+            "currency": "Euro",
+            "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_Andorra.svg.png",
+            "language": "Catalan",
+            "name": "Andora"
+        },
+        "date": "from 07.12 to 14.12",
+        "guide": {
+            "age": 30,
+            "firstName": "Alexander",
+            "languages": "French",
+            "lastName": "Miller",
+            "photo": "C:\\Users\\User\\Desktop\\TourAgency\\waist-up-portrait-of-handsome-serious-unshaven-male-keeps-hands-together-dressed-in-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer.jpg"
+        },
+        "mainPhoto": "C:\\Users\\User\\Desktop\\TourAgency\\AndorraPhoto.jpeg",
+        "meals": "breakfast",
+        "name": "Ski vacation in Andorra",
+        "photos": [
+            "C:\\Users\\User\\Desktop\\TourAgency\\president-8740-153112.jpg",
+            "C:\\Users\\User\\Desktop\\TourAgency\\president-8740-153113.jpg",
+            "C:\\Users\\User\\Desktop\\TourAgency\\president-8740-153114.jpg"
+        ],
+        "placeFrom": "December 7, Thu from Chisinau",
+        "placeTo": "December 14, Thu from Andorra la Vella",
+        "price": 34217,
+        "time": "7 nights in TWIN STANDARD",
+        "touristNumber": 1
+    },
+    {
+        "city": "Hurghada",
+        "country": {
+            "capital": "Cairo",
+            "cost_of_coffee": "$1.1 per cup",
+            "cost_of_food": "$3.9 for lunch",
+            "currency": "Egyptian pound",
+            "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_Egypt.svg.png",
+            "language": "Arabic",
+            "name": "Egypt"
+        },
+        "date": "from 30.11 to 07.12",
+        "guide": {
+            "age": 30,
+            "firstName": "Alexander",
+            "languages": "French",
+            "lastName": "Miller",
+            "photo": "C:\\Users\\User\\Desktop\\TourAgency\\waist-up-portrait-of-handsome-serious-unshaven-male-keeps-hands-together-dressed-in-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer.jpg"
+        },
+        "mainPhoto": "C:\\Users\\User\\Desktop\\TourAgency\\booking925_1925_638120600945609273.jpg",
+        "meals": "HB breakfast + dinner",
+        "name": "Sand Beach Hotel",
+        "photos": [
+            "C:\\Users\\User\\Desktop\\TourAgency\\booking925_2925_638120601141242554.jpg",
+            "C:\\Users\\User\\Desktop\\TourAgency\\booking925_3925_638120601330270100.jpg",
+            "C:\\Users\\User\\Desktop\\TourAgency\\booking925_6925_638120601892512297.jpg"
+        ],
+        "placeFrom": "November 30, Thursday 0615 from Warsaw",
+        "placeTo": " December 7, Thursday from Hurghada",
+        "price": 21432,
+        "time": "7 nights in a Standard Room",
+        "touristNumber": 2
+    },
+    {
+        "city": "Rome",
+        "country": {
+            "capital": "Rome",
+            "cost_of_coffee": "1.5$ per cup",
+            "cost_of_food": "16$ for lunch",
+            "currency": "Euro",
+            "flag": "C:\\Users\\User\\Desktop\\TourAgency\\Flag_of_Italy.svg.png",
+            "language": "Italian",
+            "name": "Italy"
+        },
+        "date": "from 18.12 to 25.12",
+        "guide": {
+            "age": 30,
+            "firstName": "Alexander",
+            "languages": "French",
+            "lastName": "Miller",
+            "photo": "C:\\Users\\User\\Desktop\\TourAgency\\waist-up-portrait-of-handsome-serious-unshaven-male-keeps-hands-together-dressed-in-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer.jpg"
+        },
+        "mainPhoto": "C:\\Users\\User\\Desktop\\TourAgency\\TreviMain.jpg",
+        "meals": "BB breakfast",
+        "name": "Trevi",
+        "photos": [
+            "C:\\Users\\User\\Desktop\\TourAgency\\Trevi1.jpg",
+            "C:\\Users\\User\\Desktop\\TourAgency\\Trevi2.jpg",
+            "C:\\Users\\User\\Desktop\\TourAgency\\Trevi3.jpg"
+        ],
+        "placeFrom": "December 18, Mon 06:05 from Warsaw",
+        "placeTo": "December 25, Monday from Rome",
+        "price": 44383,
+        "time": "7 nights in Standard",
+        "touristNumber": 2
+    }
+]

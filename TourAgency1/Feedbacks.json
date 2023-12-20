@@ -1,0 +1,70 @@
+[
+    {
+        "author": {
+            "age": 18,
+            "budget": 66304,
+            "email": "krevetka@gmail.com",
+            "firstName": "Perevirka",
+            "lastName": "Perevirka1",
+            "password": "12345678",
+            "phone": "+38055596587",
+            "photo": "C:\\Users\\User\\Desktop\\TourAgency\\guin2.jpg",
+            "sex": "female",
+            "username": "Shrimp"
+        },
+        "comment": "My experience with TourAgency was absolutely phenomenal! From start to finish, they provided impeccable service, ensuring every aspect of the tour was well-organized and tailored to our preferences. The customer service was outstanding - their team was knowledgeable, friendly, and always available to address any queries promptly.",
+        "date": "05 12 2023",
+        "rating": "5"
+    },
+    {
+        "author": {
+            "age": 20,
+            "budget": 15930,
+            "email": "gvvg@gmail.com",
+            "firstName": "fhbdsjf",
+            "lastName": "fbdfs",
+            "password": "987456",
+            "phone": "+380547821",
+            "photo": "C:\\Users\\User\\Desktop\\TourAgency\\DefaultPhoto.png",
+            "sex": "male",
+            "username": "Krevetka"
+        },
+        "comment": "My experience with TourAgency was decent overall. While they provided a satisfactory tour, there were some areas that fell short of expectations. The itinerary offered a good mix of popular attractions, but it lacked a bit of diversity and unique experiences.",
+        "date": "05 12 2023",
+        "rating": "3"
+    },
+    {
+        "author": {
+            "age": 18,
+            "budget": 50000,
+            "email": "akabachek@gmail.com",
+            "firstName": "Kabachek",
+            "lastName": "Artem",
+            "password": "12345",
+            "phone": "+3805478912",
+            "photo": "C:\\Users\\User\\Desktop\\TourAgency\\DefaultPhoto.png",
+            "sex": "male",
+            "username": "Kabachek"
+        },
+        "comment": "The itinerary provided was poorly planned, lacking in both diversity and accuracy. Many promised attractions were either closed or inaccessible during our visit, leading to a wasted opportunity and considerable disappointment. The accommodations were subpar, not meeting even the basic standards of comfort and cleanliness.",
+        "date": "05 12 2023",
+        "rating": "1"
+    },
+    {
+        "author": {
+            "age": 10,
+            "budget": 20000,
+            "email": "fgdfgf@gm.com",
+            "firstName": "Artem",
+            "lastName": "Kabachek",
+            "password": "456",
+            "phone": "+3804578921",
+            "photo": "C:\\Users\\User\\Desktop\\TourAgency\\DefaultPhoto.png",
+            "sex": "male",
+            "username": "Perevirka2"
+        },
+        "comment": "The itinerary provided by TourAgency lacked variety and depth. It felt rushed and failed to encompass some key attractions that were expected based on their promotional materials. Additionally, the accommodations fell short of the expected standards, lacking amenities and maintenance",
+        "date": "06 12 2023",
+        "rating": "2"
+    }
+]

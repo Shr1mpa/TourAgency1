@@ -1,0 +1,50 @@
+[
+    {
+        "age": 21,
+        "budget": 54016.0,
+        "email": "krevetka@gmail.com",
+        "firstName": "Perevirka",
+        "lastName": "Perevirka1",
+        "password": "12345678",
+        "phone": "+38055596587",
+        "photo": "C:\\Users\\User\\Desktop\\TourAgency\\guin2.jpg",
+        "sex": "female",
+        "username": "Shrimp"
+    },
+    {
+        "age": 20,
+        "budget": 15930,
+        "email": "gvvg@gmail.com",
+        "firstName": "fhbdsjf",
+        "lastName": "fbdfs",
+        "password": "987456",
+        "phone": "+380547821",
+        "photo": "C:\\Users\\User\\Desktop\\TourAgency\\GuineaPig.jpg",
+        "sex": "male",
+        "username": "Krevetka"
+    },
+    {
+        "age": 10,
+        "budget": 20000,
+        "email": "fgdfgf@gm.com",
+        "firstName": "Artem",
+        "lastName": "Kabachek",
+        "password": "456",
+        "phone": "+3804578921",
+        "photo": "C:\\Users\\User\\Desktop\\TourAgency\\DefaultPhoto.png",
+        "sex": "male",
+        "username": "Perevirka2"
+    },
+    {
+        "age": 18,
+        "budget": 24338.0,
+        "email": "akabachek@gmail.com",
+        "firstName": "Kabachek",
+        "lastName": "Artem",
+        "password": "12345",
+        "phone": "+3805478912",
+        "photo": "C:\\Users\\User\\Desktop\\TourAgency\\KabachekAva.jpg",
+        "sex": "male",
+        "username": "Kabachek"
+    }
+]

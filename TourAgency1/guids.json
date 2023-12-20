@@ -1,0 +1,23 @@
+[
+    {
+        "age": 25,
+        "firstName": "Sofia",
+        "languages": "Spenish",
+        "lastName": "Rodriguez",
+        "photo": "C:\\Users\\User\\Desktop\\TourAgency\\pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction.jpg"
+    },
+    {
+        "age": 24,
+        "firstName": "Emily",
+        "languages": "Italian",
+        "lastName": "Johnson",
+        "photo": "C:\\Users\\User\\Desktop\\TourAgency\\people-and-emotions-close-up-of-confident-smiling-young-woman-looking-at-camera-standing-in-casual-r.jpg"
+    },
+    {
+        "age": 30,
+        "firstName": "Alexander",
+        "languages": "French",
+        "lastName": "Miller",
+        "photo": "C:\\Users\\User\\Desktop\\TourAgency\\waist-up-portrait-of-handsome-serious-unshaven-male-keeps-hands-together-dressed-in-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer.jpg"
+    }
+]
