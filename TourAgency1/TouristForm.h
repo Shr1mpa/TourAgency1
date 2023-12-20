@@ -299,6 +299,7 @@ namespace TourAgency1 {
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox3->TabIndex = 9;
 			this->pictureBox3->TabStop = false;
+			this->pictureBox3->Click += gcnew System::EventHandler(this, &TouristForm::pictureBox3_Click);
 			// 
 			// label1
 			// 
@@ -588,10 +589,10 @@ namespace TourAgency1 {
 			this->panel1->Controls->Add(this->label18);
 			this->panel1->Controls->Add(this->label17);
 			this->panel1->Controls->Add(this->pictureBox5);
-			this->panel1->Location = System::Drawing::Point(1, 81);
+			this->panel1->Location = System::Drawing::Point(1, 84);
 			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1300, 559);
+			this->panel1->Size = System::Drawing::Size(1300, 556);
 			this->panel1->TabIndex = 8;
 			this->panel1->Visible = false;
 			// 
@@ -1011,10 +1012,10 @@ namespace TourAgency1 {
 			// 
 			// flowLayoutPanel1
 			// 
-			this->flowLayoutPanel1->Location = System::Drawing::Point(1, 81);
+			this->flowLayoutPanel1->Location = System::Drawing::Point(1, 84);
 			this->flowLayoutPanel1->Margin = System::Windows::Forms::Padding(4);
 			this->flowLayoutPanel1->Name = L"flowLayoutPanel1";
-			this->flowLayoutPanel1->Size = System::Drawing::Size(1300, 578);
+			this->flowLayoutPanel1->Size = System::Drawing::Size(1300, 575);
 			this->flowLayoutPanel1->TabIndex = 10;
 			// 
 			// TouristForm
@@ -1024,13 +1025,13 @@ namespace TourAgency1 {
 			this->BackColor = System::Drawing::Color::FloralWhite;
 			this->ClientSize = System::Drawing::Size(1307, 652);
 			this->Controls->Add(this->panel10);
+			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->flowLayoutPanel1);
 			this->Controls->Add(this->label35);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->label2);
-			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox1);
@@ -1529,6 +1530,61 @@ private: System::Void label35_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	Owner->Show();
 	this->Close();
+}
+private: System::Void pictureBox3_Click(System::Object^ sender, System::EventArgs^ e) {
+	panel1->Show();
+	panel4->Show();
+	System::String^ tourName = dynamic_cast<System::String^>(textBox1->Text); // Отримання назви туру з Tag кнопки
+
+	// Знаходження туру за його назвою
+	
+	Tour *foundTour = agency->findTourByNamePointer(msclr::interop::marshal_as<std::string>(tourName));
+	if (foundTour == nullptr) {
+		MessageBox::Show("Tour not found");
+	}
+	else {
+		vector<string> photos = foundTour->getPhotos();
+		pictureBox5->ImageLocation = gcnew System::String(foundTour->getMainPhoto().c_str());
+		pictureBox6->ImageLocation = gcnew System::String(photos[0].c_str());
+		pictureBox7->ImageLocation = gcnew System::String(photos[1].c_str());
+		pictureBox8->ImageLocation = gcnew System::String(photos[2].c_str());
+		System::String^ nameStr = gcnew System::String(foundTour->getName().c_str());
+		label17->Text = nameStr;
+		System::String^ countryStr = gcnew System::String(foundTour->getCountry()->getName().c_str());
+		label18->Text = countryStr + " ,";
+		System::String^ cityStr = gcnew System::String(foundTour->getCity().c_str());
+		label19->Text = cityStr;
+		System::String^ dateStr = gcnew System::String(foundTour->getDate().c_str());
+		label22->Text = dateStr;
+		System::String^ durationStr = gcnew System::String(foundTour->getDuration().c_str());
+		label24->Text = durationStr;
+		System::String^ mealsStr = gcnew System::String(foundTour->getMeals().c_str());
+		label26->Text = mealsStr;
+		System::String^ touristsStr = gcnew System::String(foundTour->getTourists().ToString());
+		label28->Text = touristsStr + " adults";
+		System::String^ fromStr = gcnew System::String(foundTour->getPlaceFrom().c_str());
+		label29->Text = fromStr;
+		System::String^ toStr = gcnew System::String(foundTour->getPlaceTo().c_str());
+		label30->Text = toStr;
+		System::String^ priceStr = gcnew System::String(foundTour->getPrice().ToString());
+		label20->Text = priceStr;
+		if (foundTour->getGuide() != nullptr) {
+			System::String^ guideStr = gcnew System::String((foundTour->getGuide()->getName() + " " + foundTour->getGuide()->getSurname()).c_str());
+			label33->Text = guideStr;
+		}
+		else {
+			label33->Text = "No guide";
+		}
+
+		if (agency->getDiscount()->getName() != "NoDiscount") {
+			label31->Show();
+			System::String^ discountStr = gcnew System::String(agency->originalTourPrice(foundTour->getName()).ToString());
+
+			label31->Text = discountStr;
+		}
+	}
+	
+
 }
 };
 }

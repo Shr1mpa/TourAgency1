@@ -514,6 +514,7 @@ std::string city = item["city"];
                break;
            }
        }
+       return nullptr;
    }
    Tour findTourByName(string name) {
        for (auto& tour : tours) {
