@@ -29,7 +29,7 @@ int main(cli::array<String^>^ args) {
 	Application::SetCompatibleTextRenderingDefault(false);
 	//Application::EnableVisualStyles();
 	/*Application::Run(gcnew MainForm);*/
-	TourAgency1::AdminForm form;
+	TourAgency1::Loading form;
 	Application::Run(% form);
 
 	return 0;

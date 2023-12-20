@@ -18,6 +18,8 @@ namespace TourAgency1 {
 	using namespace System::Drawing;
 	using namespace System::Runtime::InteropServices;
 	using namespace System::Collections::Generic;
+	
+	using namespace System::Drawing::Drawing2D;
 
 	/// <summary>
 	/// Сводка для TouristForm
@@ -198,13 +200,13 @@ namespace TourAgency1 {
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->label34 = (gcnew System::Windows::Forms::Label());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->label35 = (gcnew System::Windows::Forms::Label());
 			this->flowLayoutPanel1 = (gcnew System::Windows::Forms::FlowLayoutPanel());
-			this->button6 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -930,6 +932,19 @@ namespace TourAgency1 {
 			this->panel10->TabIndex = 12;
 			this->panel10->Visible = false;
 			// 
+			// button6
+			// 
+			this->button6->BackColor = System::Drawing::Color::Cornsilk;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button6->Location = System::Drawing::Point(16, 138);
+			this->button6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(125, 27);
+			this->button6->TabIndex = 4;
+			this->button6->Text = L"Sign out";
+			this->button6->UseVisualStyleBackColor = false;
+			this->button6->Click += gcnew System::EventHandler(this, &TouristForm::button6_Click);
+			// 
 			// label34
 			// 
 			this->label34->AutoSize = true;
@@ -1002,19 +1017,6 @@ namespace TourAgency1 {
 			this->flowLayoutPanel1->Size = System::Drawing::Size(1300, 578);
 			this->flowLayoutPanel1->TabIndex = 10;
 			// 
-			// button6
-			// 
-			this->button6->BackColor = System::Drawing::Color::Cornsilk;
-			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button6->Location = System::Drawing::Point(16, 138);
-			this->button6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(125, 27);
-			this->button6->TabIndex = 4;
-			this->button6->Text = L"Sign out";
-			this->button6->UseVisualStyleBackColor = false;
-			this->button6->Click += gcnew System::EventHandler(this, &TouristForm::button6_Click);
-			// 
 			// TouristForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1081,6 +1083,18 @@ namespace TourAgency1 {
 		List<String^>^ tours_selectes = gcnew List<String^>();
 		Discount* discount = nullptr;
 		List<Panel^>^ createdPanels = gcnew List<Panel^>();
+		void SetRoundedPanel(Panel^ panel, int cornerRadius)
+		{
+			GraphicsPath^ path = gcnew GraphicsPath();
+			path->StartFigure();
+			path->AddArc(0, 0, cornerRadius * 2, cornerRadius * 2, 180, 90);
+			path->AddArc(panel->Width - cornerRadius * 2, 0, cornerRadius * 2, cornerRadius * 2, 270, 90);
+			path->AddArc(panel->Width - cornerRadius * 2, panel->Height - cornerRadius * 2, cornerRadius * 2, cornerRadius * 2, 0, 90);
+			path->AddArc(0, panel->Height - cornerRadius * 2, cornerRadius * 2, cornerRadius * 2, 90, 90);
+			path->CloseFigure();
+
+			panel->Region = gcnew System::Drawing::Region(path);
+		}
 		void LoadCountryPhotoAndName(PictureBox^ pictureBox, Label^ label, const std::string& countryName, const std::string& imagePath) {
 			System::String^ imagePath2 = gcnew System::String(imagePath.c_str());
 			pictureBox->ImageLocation = imagePath2;
@@ -1141,6 +1155,7 @@ namespace TourAgency1 {
 				// Тут можна виконати інші дії для відображення інформації про тур, як ви робили раніше
 			}
 		}
+
 		void ShowCountryInfo(Object^ sender, EventArgs^ e) {
 			PictureBox^ clickedPictureBox = dynamic_cast<PictureBox^>(sender);
 			vector<Country> countries = agency->getCountries();
@@ -1168,78 +1183,114 @@ namespace TourAgency1 {
 						label9->Text = gcnew System::String(country.getCapital().c_str());
 						label13->Text = gcnew System::String(country.getCoffee().c_str());
 						label15->Text = gcnew System::String(country.getFood().c_str());
+						SetRoundedPanel(panel5, 7);
+						SetRoundedPanel(panel6, 7);
+						SetRoundedPanel(panel7, 7);
+						SetRoundedPanel(panel8, 7);
+						SetRoundedPanel(panel9, 7);
                             int panelWidth = 300; // Ширина панелі туру
 							int panelHeight = 200; // Висота панелі туру
-							int horizontalSpacing = 10; // Горизонтальний відступ між панелями
+							int horizontalSpacing = 0; // Горизонтальний відступ між панелями
 							int verticalSpacing = 10; // Вертикальний відступ між панелями
 
 							int currentX = horizontalSpacing;
 							int currentY = verticalSpacing+150;
+							int maxPanelsPerRow = (panel4->Width - horizontalSpacing) / (panelWidth + horizontalSpacing);
+							int currentRow = 0;
+							int currentColumn = 0;
 							panel4->AutoScroll = true;
 						for (auto& tour : selected_tours) {
 							
 
-							
+							int panelX = currentColumn * (panelWidth + horizontalSpacing) + horizontalSpacing+100;
+							int panelY = currentRow * (panelHeight + verticalSpacing) + verticalSpacing+125;
 								Panel^ guidePanel = gcnew Panel();
-								guidePanel->Width = 700; // Розмір Panel можна змінити за необхідності
-								guidePanel->Height = 155;
-								guidePanel->Location = Point(currentX, currentY);
+								guidePanel->Width = 225; // Розмір Panel можна змінити за необхідності
+								guidePanel->Height = 300;
+								guidePanel->Location = Point(panelX, panelY);
 								guidePanel->BackColor = System::Drawing::Color::Moccasin;
-
+								
 								PictureBox^ pictureBox = gcnew PictureBox();
 								pictureBox->SizeMode = PictureBoxSizeMode::StretchImage;
-								pictureBox->Width = 150; // Розмір PictureBox можна змінити за необхідності
+								pictureBox->Width = 250; // Розмір PictureBox можна змінити за необхідності
 								pictureBox->Height = 150;
 								pictureBox->ImageLocation = gcnew System::String(tour.getMainPhoto().c_str()); // Завантаження фото гіда
 
 								Label^ nameLabel = gcnew Label();
 								System::String^ nameStr = gcnew System::String(tour.getName().c_str());
-								nameLabel->Text = "Name: " + nameStr;
+								nameLabel->Text =  nameStr;
 
-								float fontSize = static_cast<float>(pictureBox->Width) / 8.0f; // Змініть коефіцієнт за необхідності
+								float fontSize = 9.0f; // Змініть коефіцієнт за необхідності
 								nameLabel->Font = gcnew System::Drawing::Font(nameLabel->Font->FontFamily, fontSize);
 
 								nameLabel->AutoSize = true;
-								nameLabel->Location = Point(pictureBox->Width + 5, 0);
+								nameLabel->Location = Point(0, pictureBox->Height+2);
 								nameLabel->AutoEllipsis = true;
 								Label^ countryLabel = gcnew Label();
 								System::String^ countryStr = gcnew System::String(tour.getCountry()->getName().c_str());
 								System::String^ cityStr = gcnew System::String(tour.getCity().c_str());
-								countryLabel->Text = "Country: " + countryStr + " | " + " City: " + cityStr;
+								countryLabel->Text = countryStr + " , "  + cityStr;
 
 
 								countryLabel->Font = gcnew System::Drawing::Font(nameLabel->Font->FontFamily, fontSize);
 
 								countryLabel->AutoSize = true;
-								countryLabel->Location = Point(pictureBox->Width + 5, nameLabel->Height);
+								countryLabel->Location = Point(0, nameLabel->Height+pictureBox->Height+2);
 								countryLabel->AutoEllipsis = true;
+								PictureBox^ pictureBoxDate = gcnew PictureBox();
+								pictureBoxDate->SizeMode = PictureBoxSizeMode::StretchImage;
+								pictureBoxDate->Image = Image::FromFile("C:\\Users\\User\\Desktop\\TourAgency1\\Calendar.png"); // Вкажіть шлях до зображення літака
+								pictureBoxDate->Width = 15;
+								pictureBoxDate->Height = 15;
+								pictureBoxDate->Location = Point(0, nameLabel->Height + pictureBox->Height + countryLabel->Height + 2);
+								
 								Label^ dateLabel = gcnew Label();
 								System::String^ dateStr = gcnew System::String(tour.getDate().c_str());
 
-								dateLabel->Text = "Dates: " + dateStr;
+								dateLabel->Text =  dateStr;
 								dateLabel->Font = gcnew System::Drawing::Font(nameLabel->Font->FontFamily, fontSize);
 
 								dateLabel->AutoSize = true;
-								dateLabel->Location = Point(pictureBox->Width + 5, nameLabel->Height + countryLabel->Height);
+								dateLabel->Location = Point(pictureBoxDate->Width + 5, nameLabel->Height + pictureBox->Height + countryLabel->Height + 2);
 								dateLabel->AutoEllipsis = true;
+								PictureBox^ pictureBoxPlane = gcnew PictureBox();
+								pictureBoxPlane->SizeMode = PictureBoxSizeMode::StretchImage;
+								pictureBoxPlane->Image = Image::FromFile("C:\\Users\\User\\Desktop\\TourAgency1\\plane.png"); // Вкажіть шлях до зображення літака
+								pictureBoxPlane->Width = 15;
+								pictureBoxPlane->Height = 15;
+								pictureBoxPlane->Location = Point(0, nameLabel->Height + pictureBox->Height + countryLabel->Height + dateLabel->Height + 2);
 								Label^ timeLabel = gcnew Label();
-								System::String^ timeStr = gcnew System::String(tour.getTime().c_str());
+								System::String^ placeFromStr = gcnew System::String(tour.getPlaceFrom().c_str());
+								System::String^ timeStr = "";
 
-								timeLabel->Text = "Duration: " + timeStr;
+								// Пошук позиції початку підстроки "from"
+								int fromIndex = placeFromStr->IndexOf("from");
+
+								if (fromIndex != -1) { // Якщо "from" знайдено у рядку
+									// Вибір підстроки, що починається з "from" до кінця рядка
+									timeStr = placeFromStr->Substring(fromIndex);
+								}
+								else {
+									// Якщо "from" не знайдено у рядку
+									// Зробіть потрібні дії для відсутності "from" у рядку
+								}
+								
+
+								timeLabel->Text = timeStr;
 								timeLabel->Font = gcnew System::Drawing::Font(nameLabel->Font->FontFamily, fontSize);
 
 								timeLabel->AutoSize = true;
-								timeLabel->Location = Point(pictureBox->Width + 5, nameLabel->Height + countryLabel->Height + timeLabel->Height);
+								timeLabel->Location = Point(pictureBoxPlane->Width + 5, nameLabel->Height + pictureBox->Height + countryLabel->Height + dateLabel->Height + 2);
 								timeLabel->AutoEllipsis = true;
 								
 								Label^ priceLabel = gcnew Label();
 								System::String^ priceStr = gcnew System::String(tour.getPrice().ToString());
 
-								priceLabel->Text = "Price: " + priceStr;
-								priceLabel->Font = gcnew System::Drawing::Font(nameLabel->Font->FontFamily, fontSize);
+								priceLabel->Text =  priceStr;
+								priceLabel->Font = gcnew System::Drawing::Font(nameLabel->Font->FontFamily, 14);
 
 								priceLabel->AutoSize = true;
-								priceLabel->Location = Point(pictureBox->Width + 5, nameLabel->Height + countryLabel->Height + timeLabel->Height+ priceLabel->Height);
+								priceLabel->Location = Point(20, nameLabel->Height + pictureBox->Height + countryLabel->Height + dateLabel->Height + timeLabel->Height + 2);
 								priceLabel->AutoEllipsis = true;
 
 								if (agency->getDiscount()->getName() != "NoDiscount") {
@@ -1251,7 +1302,7 @@ namespace TourAgency1 {
 									discountLabel->ForeColor = System::Drawing::Color::Red; // Налаштування кольору шрифту на червоний
 									discountLabel->BackColor = System::Drawing::Color::Transparent;
 									discountLabel->AutoSize = true;
-									discountLabel->Location = Point(priceLabel->Location.X + priceLabel->Width + 70, priceLabel->Location.Y+5); // Розміщення справа від priceLabel
+									discountLabel->Location = Point(priceLabel->Location.X + priceLabel->Width, nameLabel->Height + pictureBox->Height + countryLabel->Height + dateLabel->Height + timeLabel->Height + 2); // Розміщення справа від priceLabel
 									discountLabel->AutoEllipsis = true;
 									
 
@@ -1261,7 +1312,7 @@ namespace TourAgency1 {
 								detailsButton->Text = "More Details";
 								detailsButton->Width = 100;
 								detailsButton->Height = 30;
-								detailsButton->Location = Point(pictureBox->Width + 5, nameLabel->Height + countryLabel->Height + timeLabel->Height + priceLabel->Height + dateLabel->Height+7);
+								detailsButton->Location = Point(pictureBox->Width/4, nameLabel->Height + pictureBox->Height + countryLabel->Height + dateLabel->Height + timeLabel->Height + priceLabel->Height+4);
 								detailsButton->Click += gcnew EventHandler(this, &TouristForm::ShowTourDetails); // Підключення методу-обробника подій для кнопки
 								detailsButton->Tag = gcnew System::String(tour.getName().c_str()); // Позначка для визначення, яке зображення показувати
 								detailsButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat; // Змініть стиль на Flat для більшої сучасності
@@ -1280,14 +1331,19 @@ namespace TourAgency1 {
 								guidePanel->Controls->Add(dateLabel);
 								guidePanel->Controls->Add(timeLabel);
 								guidePanel->Controls->Add(priceLabel);
-
+								guidePanel->Controls->Add(pictureBoxDate);
+								guidePanel->Controls->Add(pictureBoxPlane);
 
 								// Додавання панелі гіда до panel36
 								panel4->Controls->Add(guidePanel);
 								createdPanels->Add(guidePanel);
 
 								// Оновлення координат для наступної панелі туру
-								currentY += panelHeight + verticalSpacing;
+								currentColumn++;
+								if (currentColumn >= maxPanelsPerRow) {
+									currentColumn = 0;
+									currentRow++;
+								}
 							
 						}
 						break;
